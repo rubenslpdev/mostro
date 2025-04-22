@@ -2,17 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Insights Cards Data
   const insightCards = [
     {
-      icon: './imgs/insights icon 1.svg',
+      icon: './imgs/insights-icon-1.svg',
       title: '8 participants',
       description: '100% had Bitcoin wallet experience, 62.5% had P2P trading experience',
     },
     {
-      icon: './imgs/insights icon 2.svg',
+      icon: './imgs/insights-icon-2.svg',
       title: 'Think-Aloud Protocol',
       description: 'Users voiced their thoughts while navigating the app',
     },
     {
-      icon: './imgs/insights icon 3.svg',
+      icon: './imgs/insights-icon-3.svg',
       title: 'Scenario',
       description: '"You\'re at a coffee shop and need to sell BTC for BRL."',
     },
