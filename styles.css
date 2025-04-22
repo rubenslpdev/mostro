@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lily+Script+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+  --primary-bg: #1d212c;
+  --secondary-bg: #101219;
+  --highlight-green: #9cd84f;
+  --highlight-purple: #9747ff;
+  --text-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--text-white);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1272px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero {
+  padding: 0 2rem;
+  margin-top: 1rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-image: url('./imgs/Background-map.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.hero-text {
+  max-width: 547px;
+}
+
+.hero-text h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: var(--highlight-green);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  max-height: 143px;
+  object-fit: contain;
+}
+
+/* Button Styles */
+.cta-button {
+  background-color: var(--highlight-green);
+  color: #373737;
+  border: none;
+  border-radius: 40px;
+  padding: 1rem 2rem;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 2rem 0;
+}
+
+.cta-button:hover {
+  background-color: #8bc33f;
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 2rem;
+}
+
+h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Intro Styles */
+
+.intro-lead {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.intro-text {
+  line-height: 1.2;
+}
+
+/* Cards */
+.insights {
+  position: relative;
+  background-color: var(--secondary-bg);
+  margin: 6rem 0;
+}
+
+.insights::before {
+  content: '';
+  position: absolute;
+  left: -50vw;
+  right: -50vw;
+  top: 0;
+  bottom: 0;
+  background-color: var(--secondary-bg);
+  z-index: -1;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: var(--primary-bg);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+}
+
+/* Findings Section */
+
+.findings {
+  background-image: url('./imgs/Backgorund-key.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.findings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rating-circle {
+  width: 265px;
+  height: 265px;
+  background-color: #8bc33f;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-bg);
+  margin: 2rem auto;
+  flex-shrink: 0;
+}
+
+.rating-big {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.rating-small {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Takeaways */
+.takeaways {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.takeaways-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.takeaway {
+  font-size: 1.25rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Quote Section */
+.quote {
+  text-align: center;
+}
+
+.quote-mark {
+  font-family: 'Lily Script One', system-ui;
+  font-size: 6rem;
+  color: var(--highlight-green);
+  display: block;
+  line-height: 1;
+}
+
+.quote p {
+  font-family: 'Crimson Text', serif;
+  color: var(--highlight-green);
+  font-size: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+/* Dark Sections */
+.dark {
+  position: relative;
+  background-color: var(--secondary-bg);
+}
+
+.dark::before {
+  content: '';
+  position: absolute;
+  left: -50vw;
+  right: -50vw;
+  top: 0;
+  bottom: 0;
+  background-color: var(--secondary-bg);
+  z-index: -1;
+}
+
+/* Image Sections */
+.full-width-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+/* Image Caption */
+.image-caption {
+  text-align: center;
+  margin-top: 0.6rem;
+  font-style: italic;
+  color: var(--highlight-purple);
+}
+
+/* Carousel Styles */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 8px;
+}
+
+.carousel-image.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .findings-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .hero {
+    padding: 6rem 4rem;
+  }
+
+  section {
+    padding: 6rem 4rem;
+  }
+}
+
+/* Highlight Colors */
+.highlight-purple {
+  color: var(--highlight-purple);
+}
+
+.highlight-green {
+  color: var(--highlight-green);
+}
